@@ -58,4 +58,11 @@ gettawayHeading.addEventListener('dblclick', event => {
 let welcomeHeading = document.getElementById('welcome');
 welcomeHeading.addEventListener('click', event => {
     event.target.textContent = 'Welkom By Die Pret Bus!';
-})
+    event.preventDefault();
+}, false);
+
+// prevent normal button function with preventDefault and stopPropagation 
+button.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+});
