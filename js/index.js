@@ -35,7 +35,11 @@ imgAdventure.addEventListener('drag', event => {
     event.target.style.outline = '5px dotted green';
 })
 
-
+// alert message when button clicked 
+let funSunButton = document.getElementById('fun-sun');
+funSunButton.addEventListener('click', (event) => {
+    alert('Not Available In The Rainy Season!')
+})
 
 
 
