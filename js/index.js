@@ -29,14 +29,20 @@ imgDestination.addEventListener('mouseout', () => {
     imgDestination.src = 'img/destination1.jpg';
 })
 
+// give image green dotted outline when dragged 
+let imgAdventure = document.querySelector('.img-fluid');
+imgAdventure.addEventListener('drag', event => {
+    event.target.style.outline = '5px dotted green';
+})
+
 
 
 
 
 
 // change main navigation to block display??
-let mainNav = document.querySelector('.container .nav-container .nav .nav-links');
+let mainNav = document.querySelectorAll('.nav-link');
 
-mainNav.addEventListener('mouseover', () => {
-    mainNav.style.display = 'block';
+mainNav.addEventListener('mouseover', event => {
+    event.target.style.direction = 'rtl';
 })
