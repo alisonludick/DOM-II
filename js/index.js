@@ -53,3 +53,9 @@ let gettawayHeading = document.getElementById('honeymoon');
 gettawayHeading.addEventListener('dblclick', event => {
     event.target.innerText += " ~ For NewlyWeds!";
 })
+
+// translate heading to Afrikaans when clicked
+let welcomeHeading = document.getElementById('welcome');
+welcomeHeading.addEventListener('click', event => {
+    event.target.textContent = 'Welkom By Die Pret Bus!';
+})
