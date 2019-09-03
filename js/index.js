@@ -48,10 +48,8 @@ mtnExcButton.addEventListener('click', (event) => {
     event.target.style.color = 'red';
 })
 
-
-// change main navigation to block display??
-// let mainNav = document.querySelectorAll('.nav-link');
-
-// mainNav.addEventListener('mouseover', event => {
-//     event.target.style.direction = 'rtl';
-// })
+// add extra text to heading with dlbclick
+let gettawayHeading = document.getElementById('honeymoon');
+gettawayHeading.addEventListener('dblclick', event => {
+    event.target.innerText += " ~ For NewlyWeds!";
+})
