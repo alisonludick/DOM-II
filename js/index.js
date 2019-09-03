@@ -41,12 +41,17 @@ funSunButton.addEventListener('click', (event) => {
     alert('Not Available In The Rainy Season!')
 })
 
-
+// click event changes button text, and color
+let mtnExcButton = document.getElementById('mtn-exc');
+mtnExcButton.addEventListener('click', (event) => {
+    event.target.innerText = "Make Sure You Are Fit!";
+    event.target.style.color = 'red';
+})
 
 
 // change main navigation to block display??
-let mainNav = document.querySelectorAll('.nav-link');
+// let mainNav = document.querySelectorAll('.nav-link');
 
-mainNav.addEventListener('mouseover', event => {
-    event.target.style.direction = 'rtl';
-})
+// mainNav.addEventListener('mouseover', event => {
+//     event.target.style.direction = 'rtl';
+// })
