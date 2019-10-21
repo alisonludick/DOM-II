@@ -1,1 +1,68 @@
-// Your code goes here
+// Example of how to add an EventListener:
+// element.addEventListener('click', (event) => { event.target.style.backgroundColor = 'blue'; });
+
+// click event listener to change header background color to red
+let redHeader = document.querySelector('.nav-container');
+redHeader.addEventListener('click', (event) => {
+    event.target.style.backgroundColor = 'red';
+})
+
+// mouseover event to change background color of Intro
+let changeIntro = document.querySelector('.intro');
+changeIntro.addEventListener('mouseover', (event) => {
+    event.target.style.backgroundColor = 'orange';
+})
+
+// dblclick event to change background color of text
+let textContent = document.querySelector('.text-content');
+textContent.addEventListener('dblclick', (event) => {
+    event.target.style.backgroundColor = 'silver';
+})
+
+// mouseover and mouseout to change image
+let imgDestination = document.querySelector('.dest-place');
+imgDestination.addEventListener('mouseover', () => {
+    imgDestination.src = 'img/destination2.jpg';
+})
+
+imgDestination.addEventListener('mouseout', () => {
+    imgDestination.src = 'img/destination1.jpg';
+})
+
+// give image green dotted outline when dragged 
+let imgAdventure = document.querySelector('.img-fluid');
+imgAdventure.addEventListener('drag', event => {
+    event.target.style.outline = '5px dotted green';
+})
+
+// alert message when button clicked 
+let funSunButton = document.getElementById('fun-sun');
+funSunButton.addEventListener('click', (event) => {
+    alert('Not Available In The Rainy Season!')
+})
+
+// click event changes button text, and color
+let mtnExcButton = document.getElementById('mtn-exc');
+mtnExcButton.addEventListener('click', (event) => {
+    event.target.innerText = "Make Sure You Are Fit!";
+    event.target.style.color = 'red';
+})
+
+// add extra text to heading with dlbclick
+let gettawayHeading = document.getElementById('honeymoon');
+gettawayHeading.addEventListener('dblclick', event => {
+    event.target.innerText += " ~ For NewlyWeds!";
+})
+
+// translate heading to Afrikaans when clicked
+let welcomeHeading = document.getElementById('welcome');
+welcomeHeading.addEventListener('click', event => {
+    event.target.textContent = 'Welkom By Die Pret Bus!';
+    event.preventDefault();
+}, false);
+
+// prevent normal button function with preventDefault and stopPropagation 
+button.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+});
