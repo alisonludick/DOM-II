@@ -14,8 +14,8 @@ window.addEventListener('resize', (event) => {
 })
 
 // 3. dblclick event to change background color of text
-let textContent = document.querySelector('.text-content');
-textContent.addEventListener('dblclick', (event) => {
+let contentText = document.querySelector('.text-content');
+contentText.addEventListener('dblclick', (event) => {
     event.target.style.backgroundColor = 'silver';
 })
 
@@ -62,16 +62,16 @@ welcomeHeading.addEventListener('mouseleave', event => {
 
 // prevent normal button function with stopPropagation 
 
-let contentSection = document.querySelector(".content-section");
-contentSection.addEventListener("click", (event) => {
+let contentPick = document.querySelector(".content-pick");
+contentPick.addEventListener("click", (event) => {
   event.target.style.backgroundColor="papayawhip";
   console.log("end")
 })
 
-let textLetsGo = document.querySelector(".text-content");
-textLetsGo.addEventListener('click', (event) => {
-  textLetsGo.style.backgroundColor="rebeccapurple";
-  event.stopPropagation(); // adding this will prevent the contentSection changing to papayawhip
+let textDestination = document.querySelector(".destination");
+textDestination.addEventListener('click', (event) => {
+  textDestination.style.backgroundColor="rebeccapurple";
+  event.stopPropagation(); // adding this will prevent the first div heading changing to papayawhip
   console.log("beginning")
 });
 
@@ -86,4 +86,17 @@ stopLinks.forEach(link => {
   })
 })
 
+// add button in footer to reveal all the easter eggs
+// first declare parent
+const parentFooter = document.querySelector('.footer');
+console.log('footer for button', parentFooter); 
 
+// then declare child button and appendChild to add it
+const eggButton = document.createElement('button'); 
+parentFooter.appendChild(eggButton); 
+eggButton.textContent = "Reveal The Easter Eggs"; 
+
+// when button is clicked, reveal the eggs
+eggButton.addEventListener('click', (event) => {
+    alert('The Hidden Gems Are: \n - click the header to change the background colour \n - resize the window to change the background colour of the intro \n - double click the 2nd paragraph to change its background colour \n - mouse over the last image for a cool effect \n - drag 2nd last image and see what happens \n - right click the 1st button \n - hold the mouse down on the 2nd button \n - move mouse over the final paragraph heading \n - move mouse back and forth over the Welcome heading \n - click on the last 3 paragraphs')
+})
